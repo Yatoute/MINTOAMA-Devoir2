@@ -1,0 +1,140 @@
+---
+title: "DevoirN2"
+author: "Yatoute"
+date: "13/03/2022"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+team_A <- 3 # Number of goals scored by Team A
+team_B <- 1 # Number of goals scored by Team B
+if (team_A > team_B){
+  print ("Team A wins")
+}
+
+team_A <- 1 # Number of goals scored by Team A
+team_B <- 3 # Number of goals scored by Team B
+if (team_A > team_B){
+    print ("Team A will make the playoffs")
+}
+
+team_A <- 2 # Number of goals scored by Team A
+team_B <- 2# Number of goals scored by Team B
+if (team_A > team_B){
+  print ("Team A won")
+} else if (team_A < team_B){
+  print ("Team B won")
+} else {
+  "Team A & B tied"
+}
+
+matches <- list(c(2,1),c(5,2),c(6,3))
+if (matches[[1]][1] > matches[[1]][2]){
+    print ("Win")
+} else {
+    print ("Loss")
+}
+
+if (matches[[2]][1] > matches[[2]][2]){
+   print ("Win")
+} else {
+    print ("Loss")
+}
+
+if (matches[[3]][1] > matches[[3]][2]){
+   print ("Win")
+} else {
+   print ("Loss")
+}
+
+teams <- c("team_A","team_B")
+for (value in teams){
+    print(value)
+}
+
+for (match in matches){
+    print(match)
+}
+
+matches <- list(c(2,1),c(5,2),c(6,3))
+for (match in matches){
+    sum(match)
+}
+
+total_goals <- c()
+for (match in matches){
+    total_goals <- c(total_goals, sum(match))
+}
+
+for (match in matches){
+    if (match[1] > match[2]){
+        print("Win")
+    } else {
+        print ("Lose")
+    }
+}
+
+for (match in matches){
+    if (match[1] > match[2]){
+        print("Win")
+        break
+    } else {
+        print("Lose")
+    }
+}
+
+wins <- 0
+while (wins < 10){
+    print ("Does not make playoffs")
+    wins <- wins + 1
+}
+
+wins <- 0
+while (wins <= 10){
+    if (wins < 10){
+        print("does not make playoffs")
+    } else {
+        print ("makes playoffs")
+    }
+    wins <- wins + 1
+}
+
+wins <- 0
+playoffs <- c()
+while (wins <= 15){
+    if (wins < 10){
+        print("does not make playoffs")
+        playoffs <- c(playoffs, "does not make playoffs")
+    } else {
+        print ("makes playoffs")
+        playoffs <- c(playoffs, "makes playoffs")
+        break
+    }
+    wins <- wins + 1
+}
+
+
